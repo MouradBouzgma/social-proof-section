@@ -1,0 +1,130 @@
+.container {
+  margin: auto;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+:root {
+  --maincolor: hsl(300, 43%, 22%);
+  --secondery-color: hsl(333, 80%, 67%);
+  --DarkMagenta: hsl(303, 10%, 53%);
+  --LightMagenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+@media (min-width: 374px) {
+  .container {
+    width: 370px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 1100px) {
+  .container {
+    width: 1000px;
+  }
+}
+.card .presentation .container {
+  display: grid;
+}
+@media (min-width: 374px) {
+  .card .presentation .container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+@media (min-width: 1100px) {
+  .card .presentation .container {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  }
+}
+.card .presentation .info h1 {
+  font-family: "spartan", sans-serif;
+  font-weight: 700;
+  color: var(--maincolor);
+}
+.card .presentation .info p,
+.card .rating div p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--DarkMagenta);
+}
+.card .rating div {
+  background-color: var(--LightMagenta);
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.card .rating div p {
+  color: var(--maincolor);
+  font-weight: 700;
+}
+@media (min-width: 374px) {
+  .card {
+    text-align: center;
+  }
+}
+.card .cards .container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.card .cards .container div {
+  background-color: var(--maincolor);
+  border-radius: 10px;
+  margin: 10px;
+  position: relative;
+  padding: 15px;
+}
+.card .cards div img {
+  border-radius: 50%;
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  width: 70px;
+}
+.card .cards div p:first-of-type,
+.card .cards div p:nth-of-type(2) {
+  position: relative;
+  left: 40px;
+  color: var(--White);
+  font-size: 15px;
+}
+.card .cards div p:nth-of-type(2) {
+  color: var(--secondery-color);
+  bottom: 5px;
+}
+.card .cards div p:last-of-type {
+  position: relative;
+  top: 20px;
+  color: var(--White);
+  font-size: 15px;
+}
+@media (min-width: 1000px) {
+  .card .rating div:nth-of-type(2) {
+    position: relative;
+    left: 15px;
+  }
+  .cards div:nth-of-type(2) {
+    position: relative;
+    top: 15px;
+  }
+  .card .rating div:last-of-type {
+    position: relative;
+    left: 30px;
+  }
+  .card .cards div:last-of-type {
+    position: relative;
+    top: 30px;
+  }
+}
+footer {
+  margin-top: 100px;
+}
+@media (min-width: 1000px) {
+  .rating div {
+    display: flex;
+    justify-content: space-around;
+  }
+}
